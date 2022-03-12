@@ -1,0 +1,31 @@
+.main-display-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3em 32px;
+    gap: 1em;
+    transition: 1s;
+    justify-content: center;
+}
+
+
+#loadMore {
+    width: 200px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #202086;
+    transition: .3s;
+}
+
+#loadMore:hover {
+    color: #202086;
+    background-color: #fff;
+    border: 1px solid #202086;
+    text-decoration: none;
+}

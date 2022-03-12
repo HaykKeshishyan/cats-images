@@ -1,0 +1,51 @@
+
+.l_container {
+    background: linear-gradient(100deg, #dfefff -0.04%, rgba(223, 239, 255, 0.27) 94.2%);
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.l_container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(to right, transparent 0%, #26b3ff17 50%, transparent 100%);
+    animation: load 2s cubic-bezier(.86, .01, 0, .99) infinite;
+
+}
+
+
+@keyframes load {
+    from {
+        left: -150px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.l_container_loaded::before {
+    animation: none
+}
+
+.l_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+    object-position: center;
+}
+
+.l_image_loaded {
+    width: 100%;
+    opacity: 1;
+}
